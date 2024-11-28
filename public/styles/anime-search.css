@@ -1,0 +1,63 @@
+/* General container styles for search results */
+.search-results-title {
+    color: #ffffff;
+    text-align: center;
+}
+
+.search-results {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333333; /* Dark background for the results container */
+    color: #ffffff; /* Ensuring text remains visible on dark background */
+    border-radius: 8px;
+    max-width: 1000px;
+    overflow: hidden; /* Hides overflow */
+    text-align: center;
+}
+
+/* Grid layout for anime items */
+.anime-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-auto-rows: auto; /* Auto height for rows */
+    gap: 20px; /* Space between items */
+    height: calc((200px + 20px) * 5); /* 5 hàng với chiều cao và khoảng cách */
+    overflow-y: auto; /* Cuộn dọc nếu vượt quá */
+}
+
+/* Each anime item */
+.anime-item {
+    background-color: #444444; /* Slightly lighter background for anime items */
+    padding: 15px; /* Padding around the content */
+    border-radius: 8px;
+    text-align: center;
+    width: 100%; /* Width of the grid cell */
+    max-width: 200px; /* Set maximum width for each item */
+}
+
+/* Anime title styles */
+.anime-item h3 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    color: #ffffff; /* Ensure text is readable on dark background */
+}
+
+/* Anime image styles */
+.anime-image {
+    width: 100%; /* Make image fill the grid cell */
+    max-height: 250px; /* Limit the maximum height */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    object-fit: cover; /* Prevent image distortion */
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: white; /* Link color */
+}
+
+/* Hover effect for anime items */
+.anime-item:hover {
+    background-color: #555555; /* Darker background on hover */
+}

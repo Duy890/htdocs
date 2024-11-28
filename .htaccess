@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Ensure that the /anime/result/{query} URL pattern is handled
+RewriteCond %{REQUEST_URI} ^/anime/result/([^/]+)/?$
+RewriteRule ^anime/result/(.+)$ index.php?url=anime/result/$1 [L]
+
+# Handle other clean URL rewrites (for all non-existent files or directories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?url=$1 [L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Redirect root to /home
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^ /home [L,R=301]
